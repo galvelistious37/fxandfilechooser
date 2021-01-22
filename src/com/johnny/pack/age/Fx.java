@@ -10,6 +10,10 @@ import java.io.File;
 
 public class Fx extends Application {
 
+    /**
+     * main method
+     * @param args
+     */
     public static void main(String[] args) {
         launch(args);
     }

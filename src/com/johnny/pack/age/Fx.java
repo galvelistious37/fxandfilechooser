@@ -1,19 +1,12 @@
 package com.johnny.pack.age;
 
 import javafx.application.Application;
-import javafx.geometry.Orientation;
-import javafx.scene.text.Font;
-import javafx.scene.text.Text;
 import javafx.stage.*;
 import javafx.scene.*;
 import javafx.scene.layout.*;
 import javafx.scene.control.*;
-import javafx.geometry.HPos;
 import javafx.geometry.Insets;
-
 import java.io.File;
-import java.util.LinkedList;
-import java.util.regex.Pattern;
 
 public class Fx extends Application {
 
@@ -22,9 +15,6 @@ public class Fx extends Application {
     }
 
     private Stage stage;
-
-    private Label lblGreet;
-    private File selectedFile;
     private Label lblFileName;
     private Label lblFilePath;
 
@@ -33,7 +23,7 @@ public class Fx extends Application {
 
         stage = primaryStage;
 
-        lblGreet = new Label();
+        Label lblGreet = new Label();
         lblGreet.setText("Hello, choose a file!");
 
 
@@ -80,7 +70,7 @@ public class Fx extends Application {
 
     private void btnOk_Click() {
         FileChooser fChooser = new FileChooser();
-        selectedFile = fChooser.selectFile();
+        File selectedFile = fChooser.selectFile();
         lblFileName.setText("File: " + selectedFile.getName());
         lblFilePath.setText("From: " + selectedFile.getAbsolutePath());
     }
